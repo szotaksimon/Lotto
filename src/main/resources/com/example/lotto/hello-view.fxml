@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.lotto.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<GridPane maxHeight="100" maxWidth="350" minHeight="100" minWidth="200" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lotto.HelloController">
+    <columnConstraints>
+        <ColumnConstraints maxWidth="130" minWidth="130" prefWidth="130" />
+        <ColumnConstraints maxWidth="130" minWidth="130" prefWidth="130" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="36.0" minHeight="23.0" prefHeight="31.0" />
+        <RowConstraints maxHeight="27.0" minHeight="14.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="btnSorsolas" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sorsolas" prefHeight="25.0" prefWidth="100.0" text="Sorsolás" textAlignment="CENTER">
+         <GridPane.margin>
+            <Insets left="15.0" />
+         </GridPane.margin></Button>
+        <Label fx:id="lblSorsoltSzam" text="-" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+        <Label fx:id="lblSorsoltSzamok" text="Sorsolt számok" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin></Label>
+    </children>
+</GridPane>
